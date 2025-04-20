@@ -50,7 +50,8 @@ const Layout = () => {
     await getForecast(lat, lon);
   }
 
-  const key = import.meta.env.WEATHER_API_KEY;
+  const key = import.meta.env.VITE_WEATHER_API_KEY;
+  
 
   const getWeatherInfo = async(lat:number,lon:number,) => {
     setLoading(true);
