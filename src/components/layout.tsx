@@ -50,11 +50,12 @@ const Layout = () => {
     await getForecast(lat, lon);
   }
 
+  const key = import.meta.env.WEATHER_API_KEY;
 
   const getWeatherInfo = async(lat:number,lon:number,) => {
     setLoading(true);
     try {
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=<apikeyhere>&units=metric`);
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`);
 
       const data = await res.json();
       
