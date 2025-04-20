@@ -54,7 +54,7 @@ const Layout = () => {
   const getWeatherInfo = async(lat:number,lon:number,) => {
     setLoading(true);
     try {
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=d5921e5819c2e6b30573e1cd03b557a2&units=metric`);
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=<apikeyhere>&units=metric`);
 
       const data = await res.json();
       
